@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("physical-world-map (1).jpeg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+<py-env>
+  - pandas
+</py-env>
+</head>
+<py-repl id="my-repl" auto-generate=true> </py-repl>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">The Green Coders</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Climate Patterns and Trends</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium ">Climate Patterns and Trends</span><br>
+    <span class="w3-large">Sustainability through global change.</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more</a></p>
+
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">ABOUT THE PROJECT</h3>
+  <p class="w3-center w3-large">Project features</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Impact</p>
+      <p>The goal of our project is to create a positive impact on users utilizing the program.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Change</p>
+      <p>Change and diversifying users approaches to tackling the climate change issue is important to our group. We wanted to create a product that effectively conveyed how individuals can make an impact in their own countries.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Future</p>
+      <p>Here at the Green Coders Organization, we value the future generation and their fight against the ongoing climate crisis. Our program aims assist individuals in finding out about their countries climate and how they can help prevent rising temperatures.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Sustainability</p>
+      <p>Sustainability through global change is at the forefront of Green Coders' mission statement. We want to make sure that everyone has access to proper information regarding our planet.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Our Program</h3>
+      <p>This program utilizes machine learning to predict future climate trends to produce an outline for individuals to reduce their emissions.<br>
+      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Program</a></p>
+    </div>
+    <div class="w3-col m6">
+    </div>
+  </div>
+</div>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">The Green Coders</h3>
+  <p class="w3-center w3-large">Aspiring students participating in their first Hackathon.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="Dylan (1).jpg" alt="Dylan" style="width:100%">
+        <div class="w3-container">
+          <h3>Dylan Kwan</h3>
+          <p class="w3-opacity">Team Participant</p>
+          <p>Grade 12 student attending Oakville Trafalgar High School.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="Adam (1).jpg" alt="Adam" style="width:100%">
+        <div class="w3-container">
+          <h3>Adam Begagic</h3>
+          <p class="w3-opacity">Team Participant</p>
+          <p>Grade 12 student attending Oakville Trafalgar High School.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="Florian (1).jpg" alt="Florian" style="width:100%">
+        <div class="w3-container">
+          <h3>Florian Kasperbauer</h3>
+          <p class="w3-opacity">Team Participant</p>
+          <p>Grade 12 student attending Oakville Trafalgar High School.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="Varun (1).jpg" alt="Varun" style="width:100%">
+        <div class="w3-container">
+          <h3>Varun Sahni</h3>
+          <p class="w3-opacity">Team Participant</p>
+          <p>Grade 12 student attending Oakville Trafalgar High School.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">1+</span>
+    <br>Hackathon
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">5+</span>
+    <br>Projects Done
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">Immeasurable</span>
+    <br>Happy Clients
+  </div>
+<!--   <div class="w3-quarter">
+    <span class="w3-xxlarge">0+</span>
+  </div> -->
+</div>
+
+<!-- Work Section -->
+
+
+
+
+    
+
+<body>
+<p id="csv"></p>
+<py-script>
+from js import document,alert
+import pandas as pd
+from pyodide.http import open_url
+
+dfs = {
+  'Portugal' : "https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=18289299&single=true&output=csv",
+  'Russia' : "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/diamonds.csv",
+  'Phillipines' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1345178492&single=true&output=csv',
+  'Somalia' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1812151718&single=true&output=csv',
+  'Pakistan' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1649849783&single=true&output=csv',
+  'South Africa' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=916816526&single=true&output=csv',
+  'Nigeria' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=2097142338&single=true&output=csv',
+  'South Korea' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1268294931&single=true&output=csv',
+  'Madagascar' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1381693534&single=true&output=csv',
+  'Spain' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=2087802250&single=true&output=csv',
+  'Kenya' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1731413971&single=true&output=csv',
+  'Sweden' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1463763512&single=true&output=csv',
+  'Japan' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=171652347&single=true&output=csv',
+  'Switzerland' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1702770149&single=true&output=csv',
+  'Italy' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1584210141&single=true&output=csv',
+  'Tanzania' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1669991726&single=true&output=csv',
+  'Iran' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1867374964&single=true&output=csv',
+  'Thailand' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=350035388&single=true&output=csv',
+  'India' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=971734650&single=true&output=csv',
+  'Uganda' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=614084376&single=true&output=csv',
+  'Hong Kong' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1272408342&single=true&output=csv',
+  'Ukraine' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1080596110&single=true&output=csv',
+  'Haiti' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1864643547&single=true&output=csv',
+  'United Kingdom' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=805405508&single=true&output=csv',
+  'Germany' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=960569026&single=true&output=csv',
+  'Uruguay' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=376411358&single=true&output=csv',
+  'France' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1626888339&single=true&output=csv',
+  'USA' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=967991399&single=true&output=csv',
+  'Ethiopia' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=548609678&single=true&output=csv',
+  'Venezuela' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=439592444&single=true&output=csv',
+  'Egypt' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=654916613&single=true&output=csv',
+  'Ecuador' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1174414357&single=true&output=csv',
+  'Dominican Republic' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=778777951&single=true&output=csv',
+  'Colombia' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1911216266&single=true&output=csv',
+  'Chile' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=729963991&single=true&output=csv',
+  'Canada' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1204593914&single=true&output=csv',
+  'Cambodia' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=577115064&single=true&output=csv',
+  'Brazil' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=2101093255&single=true&output=csv',
+  'Bosnia' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1540684784&single=true&output=csv',
+  'Barbados' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1246824260&single=true&output=csv',
+  'Australia' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1902318173&single=true&output=csv',
+  'Argentina' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=1865508675&single=true&output=csv',
+  'Algeria' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=533378518&single=true&output=csv',
+  'Afghanistan' : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKq8QYnPFAppmuTEmiyE6uFTESmdaiy8ggVr2GsOnGwXlwdIAmuWW8R54LzVHB1oj5tIVW2_6o5F-v/pub?gid=0&single=true&output=csv'
+
+}
+
+
+def farh(country, year):
+
+  df = pd.read_csv(dfs[country])
+  X = df['Year']
+  y = df[country]
+  def errors_products():
+    numerator = (X - X.mean()) * (y - y.mean())
+    return numerator
+
+  def squared_errors():
+    denom = (X - X.mean()) ** 2
+    return denom
+    
+  slope = errors_products().sum() / squared_errors().sum()
+  intercept = y.mean() - slope * X.mean()
+
+
+  prediction = round(year * slope + intercept, 2)
+  prediction_2022 = round(2022 * slope + intercept, 2)
+  return f'The temperature in {year} will be {prediction} degrees C\n' + f'For year {year} the change in temperature from 2022 will be {round(prediction - prediction_2022, 2)} degrees C'
+    
+def convert(*ags, **kws):
+    
+    country = document.getElementById('celsius').value;
+    
+    year =  document.getElementById('celsiu').value;
+    result = farh(country, year)
+    pyscript.write("Display",result)  
+  
+
+
+</py-script>    
+
+<div class="container">
+    
+<h1 class="text-center">
+    Temperature Predictor
+</h1>
+<br />
+<p><h3>Enter the country:</h3>
+<input id="celsius" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Enter the country:" /></p>
+<p><h3>Enter the year you want to check:</h3>
+  <input id="celsiu" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Enter the year" /></p>
+<button id="convert" type="submit"  class="btn btn-info" pys-onClick="convert">Predict</button>
+<p>
+<h4>Prediction:</h4>
+<textarea id="Display" class="form-control" rows="2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Result"></textarea></p>
+
+
+
+
+</div>
+
+<!-- Modal for full size images on click-->
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
